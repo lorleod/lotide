@@ -11,14 +11,6 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 // Take in two arrays and console.log and asserts passed if equal or failed if not equal
 const assertArraysEqual = function(arrayOne, arrayTwo) {
   // input arrayOne and arrayTwo into eqArrays.
@@ -30,8 +22,24 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
   }
 };
 
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
-assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
+const middle = function(array) {
+  // find length of array
 
-assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
-assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
+  if (array.length >= 0 && array.length < 3) {
+    // if array.length is 0, 1 or 2 elements long: return empty array
+    return [];
+  } else if (array.length % 2 !== 0) {
+    // if array.length % 2 !== 0: find array.length/2 and return element
+    return [array[Math.floor(array.length / 2)]];
+  }
+  // if array.length % 2 === 0: find and return Math.floor(array.length/2) and that + index 1
+  return [array[array.length / 2 - 1], array[array.length / 2]];
+};
+
+// Test code
+assertArraysEqual(middle([1]), []);
+assertArraysEqual(middle([1, 2]), []);
+assertArraysEqual(middle([1, 2, 3]), [2]);
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
