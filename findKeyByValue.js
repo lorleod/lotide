@@ -10,8 +10,8 @@ console.log("rurrff");
 
 findKeyByValue = function (object, value) {
   //loop object keys
-  const keys = Object.keys(object);
-  for (const key of keys) {
+
+  for (const key in object) {
     // if object key's value === value then return
     if (object[key] === value) {
       return key;
