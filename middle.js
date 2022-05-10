@@ -12,4 +12,7 @@ const middle = function(array) {
   return [array[array.length / 2 - 1], array[array.length / 2]];
 };
 
+console.log(middle([1,2]))
+
 module.exports = middle;
+
