@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "Tay's LHL lotide project",
+  "name": "@lorleod/lotide",
+  "version": "1.0.3",
+  "description": "Tay's LHL lotide project - warning, I've left the list of functions incomplete and there is still more refactoring I could do. I chose to push this out now and divert focus to katas instead.",
   "directories": {
     "test": "test"
   },
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/lorleod/lotide.git"
   },
-  "author": "",
+  "author": "Me, mr semi-anon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lorleod/lotide/issues"

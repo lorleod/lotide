@@ -56,3 +56,5 @@ assertArraysEqual(
   takeUntil(test3, (x) => x % 2 !== 0),
   [6, 2, 40, 4]
 );
+
+module.exports = takeUntil;

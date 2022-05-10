@@ -38,3 +38,5 @@ console.log(results1);
 const testArray = [1,2,3,4];
 
 assertArraysEqual(map(testArray, x => x * 2),[2,4,6,8]);
+
+module.export = map;

@@ -46,3 +46,4 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 let blah = letterPositions("hello this is your captain speaking");
 console.log("blah: ", blah);
 
+module.exports = letterPositions;
